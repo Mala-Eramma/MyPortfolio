@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050816" />
+  <meta name="description" content="Mala Eramma — Python, AI & Full Stack Developer" />
+  <title>Mala Eramma — Digital Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#home">ME<span>.</span></a>
+    <nav id="nav">
+      <a href="#about">About</a><a href="#toolkit">Toolkit</a><a href="#work">Projects</a><a href="#journey">Education</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="availability" href="#contact"><i></i> AVAILABLE FOR OPPORTUNITIES</a>
+    <button class="menu" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid"></div><div class="orb orb-a"></div><div class="orb orb-b"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="line"></span> HELLO, WORLD. I'M</div>
+        <h1>Mala <span>Eramma</span></h1>
+        <div class="roles"><span id="roleText">Python Developer</span><b class="cursor">|</b></div>
+        <p class="hero-lead">Building Intelligent Experiences<br/>Through Code.</p>
+        <p class="hero-sub">Python Developer <span>·</span> AI &amp; Data Science <span>·</span> Full Stack Developer</p>
+        <div class="hero-actions"><a class="btn primary" href="#work">Explore My Work <span>↗</span></a><a class="btn ghost" href="#contact">Let's Connect <span>↗</span></a></div>
+      </div>
+      <div class="hero-art" aria-label="Electric blue illuminated technology portal">
+        <div class="portal-ring ring-one"></div><div class="portal-ring ring-two"></div><div class="portal-core"><span>ME</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-caption">CODE. CREATE. CONNECT.</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><b>↓</b></a>
+      <div class="section-index">01 <span>/</span> INTRODUCTION</div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-index">02 <span>/</span> THE PERSON BEHIND THE CODE</div>
+      <div class="section-heading"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Curious Mind.<br/><em>Creative Builder.</em><br/>AI Enthusiast.</h2></div>
+      <div class="about-copy">
+        <p class="location">⌖ &nbsp; Hyderabad, India <span>/</span> Class of 2026</p>
+        <p>I'm Mala Eramma, an Artificial Intelligence and Data Science graduate turning curiosity into intelligent, useful applications.</p>
+        <p>Aspiring Python Full Stack Engineer dedicated to developing secure, high-performance web applications and scalable server-side solutions. My interests connect Python development, full-stack web development, AI and practical software solutions.</p>
+        <p>I work with Python, OOP and data structures, build backend systems with Django, Flask and FastAPI, and use MySQL and SQLite to bring ideas to life.</p>
+        <div class="stats"><div><strong>8.02</strong><span>CGPA</span></div><div><strong>Fresher</strong><span>Ready for the next chapter</span></div></div>
+      </div>
+      <div class="focus-grid">
+        <article><span>01</span><h3>Python Development</h3><p>Clean logic. Practical solutions.</p></article>
+        <article><span>02</span><h3>AI-Powered Applications</h3><p>Intelligence with a purpose.</p></article>
+        <article><span>03</span><h3>Full Stack Development</h3><p>From interface to database.</p></article>
+        <article><span>04</span><h3>Problem Solving</h3><p>Curiosity turned into code.</p></article>
+      </div>
+    </section>
+
+    <section class="section toolkit" id="toolkit">
+      <div class="section-index">03 <span>/</span> THE TOOLKIT</div>
+      <div class="section-heading"><p class="eyebrow">TECHNOLOGIES &amp; SKILLS</p><h2>Built on curiosity.<br/><em>Powered by technology.</em></h2></div>
+      <div class="toolkit-layout">
+        <div class="tech-orbit"><div class="orbit-label">PYTHON</div><div class="orbit-label l2">AI</div><div class="orbit-label l3">SQL</div><div class="orbit-label l4">WEB</div><div class="orbit-label l5">API</div><div class="orbit-center">ME<span>.</span></div></div>
+        <div class="skill-panel">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="programming">Programming</button><button class="tab" data-tab="frontend">Frontend</button><button class="tab" data-tab="database">Database</button><button class="tab" data-tab="tools">Tools</button><button class="tab" data-tab="ai">AI &amp; Development</button>
+          </div>
+          <div class="skill-list" id="skillList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work" id="work">
+      <div class="section-index">04 <span>/</span> SELECTED WORK</div>
+      <div class="section-heading"><p class="eyebrow">A FEW THINGS I'VE BUILT</p><h2>Ideas, brought to <em>life.</em></h2><p class="section-desc">A collection of learning, experimentation, and purposeful building.</p></div>
+      <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="full">Full Stack</button><button class="filter" data-filter="ai">AI</button></div>
+      <div class="project-grid">
+        <article class="project-card" data-category="ai full"><div class="project-visual visual-study"><span class="visual-icon">✳</span><span class="visual-word">STUDY<span>/</span></span><div class="mock-window"><i></i><i></i><i></i><div class="mock-lines"></div></div></div><div class="project-meta">01 / AI / FULL STACK</div><h3>AI Study Assistant</h3><p>An AI-powered study application designed to help learners interact with study materials and access learning assistance.</p><div class="tags">Python <span>FastAPI</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Gemini API</span><span>SQLAlchemy</span></div><div class="project-links"><a href="https://github.com/Mala-Eramma/Study" target="_blank" rel="noreferrer">View Project ↗</a><a href="https://mala-eramma.github.io/Study/" target="_blank" rel="noreferrer">Live Demo ↗</a></div><small>STUDY / APPLICATION PREVIEW COMPLETED</small></article>
+        <article class="project-card" data-category="ai"><div class="project-visual visual-tutor"><span class="visual-icon">◉</span><span class="visual-word">TUTOR<span>/</span></span><div class="sound-bars"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div></div><div class="project-meta">02 / AI / VOICE LEARNING</div><h3>AI Voice Tutor</h3><p>An interactive AI learning assistant that accepts questions and provides AI-generated responses, with voice-oriented functionality.</p><div class="tags">Python <span>FastAPI</span><span>HTML</span><span>CSS</span><span>Jinja2</span><span>Gemini API</span><span>SQLAlchemy</span></div><div class="project-links"><a href="https://github.com/Mala-Eramma/AI-Voice-Tutor" target="_blank" rel="noreferrer">View Project ↗</a><a href="https://mala-eramma.github.io/Voice-Tutor/" target="_blank" rel="noreferrer">Live Demo ↗</a></div><small>TUTOR / APPLICATION PREVIEW COMPLETED</small></article>
+        <article class="project-card" data-category="full"><div class="project-visual visual-bank"><span class="visual-icon">▤</span><span class="visual-word">UNION<span>/</span></span><div class="bank-card"><b>UNION BANK</b><span>•••• &nbsp; •••• &nbsp; ••••</span></div></div><div class="project-meta">03 / FULL STACK / BANKING</div><h3>Union Bank Management System</h3><p>A banking management application featuring account-related operations such as registration, deposits, withdrawals, balance checking, and account details.</p><div class="tags">Python <span>Flask</span><span>HTML</span><span>CSS</span><span>SQLite</span></div><div class="project-links"><a href="https://github.com/Mala-Eramma/Union" target="_blank" rel="noreferrer">View Project ↗</a><a href="https://mala-eramma.github.io/Union/" target="_blank" rel="noreferrer">Live Demo ↗</a></div><small>UNION / APPLICATION PREVIEW COMPLETED</small></article>
+        <article class="project-card" data-category="full"><div class="project-visual visual-calc"><span class="visual-icon">⌁</span><span class="visual-word">VOICE<span>/</span></span><div class="calculator"><span>123 + 456</span><strong>579</strong></div></div><div class="project-meta">04 / VOICE / WEB APPLICATION</div><h3>Voice Calculator</h3><p>A calculator application with voice-based calculations and calculation history.</p><div class="tags">Python <span>FastAPI</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Speech API</span><span>SQLAlchemy</span><span>pyttsx3</span></div><div class="project-links"><a href="https://github.com/Mala-Eramma/Voice" target="_blank" rel="noreferrer">View Project ↗</a><a href="https://mala-eramma.github.io/Voice/" target="_blank" rel="noreferrer">Live Demo ↗</a></div><small>VOICE / APPLICATION PREVIEW COMPLETED</small></article>
+      </div>
+      <a class="github-link" href="https://github.com/Mala-Eramma" target="_blank" rel="noreferrer">More on GitHub ↗</a>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="section-index">05 <span>/</span> MY JOURNEY</div>
+      <div class="section-heading"><p class="eyebrow">EDUCATION &amp; CERTIFICATIONS</p><h2>Learning is a<br/><em>continuous journey.</em></h2><p class="section-desc">At the beginning of my professional journey — an AI &amp; Data Science foundation, hands-on projects, and a readiness to contribute.</p></div>
+      <div class="timeline">
+        <div class="timeline-date">2022 — 2026</div><div class="timeline-content"><h3>B.Tech — Computer Science Engineering (Artificial Intelligence &amp; Data Science)</h3><p>St. Mary's Group Of Institutions Guntur For Women</p><span>Guntur, Andhra Pradesh</span><b>8.02 CGPA</b></div>
+      </div>
+      <div class="cert-grid">
+        <article class="cert-card"><div class="cert-mark">M<span>®</span></div><div><small>MICROSOFT · JUNE, 2026</small><h3>Introduction to Generative AI: Exploring the Basics</h3><p>Microsoft</p></div></article>
+        <article class="cert-card"><div class="cert-mark">M<span>®</span></div><div><small>MICROSOFT · JUNE, 2026</small><h3>Explore Fundamental Relational Data Concepts</h3><p>Microsoft</p></div></article>
+        <article class="cert-card"><div class="cert-mark hack">H</div><div><small>HACKERRANK · OCTOBER, 2026</small><h3>SQL (Basics) – Certificate of Accomplishment</h3><p>HackerRank</p></div></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-index">06 <span>/</span> THE NEXT CHAPTER</div>
+      <div class="contact-heading"><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let's Build<br/><em>Together.</em></h2><p>“Let's connect to build secure, scalable, and high-performance applications together!”</p><span class="relocate">Ready to relocate and work in shifts.</span></div>
+      <div class="contact-grid">
+        <div class="contact-details"><div><small>EMAIL</small><a href="mailto:ramappamala43@gmail.com">ramappamala43@gmail.com ↗</a></div><div><small>LOCATION</small><p>Hyderabad, India</p></div><div><small>AVAILABILITY</small><p>Fresher · Open to relocate &amp; shifts</p></div><div class="socials"><a href="https://linkedin.com/in/mala-eramma-497a5a365" target="_blank">LinkedIn ↗</a><a href="https://github.com/Mala-Eramma" target="_blank">GitHub ↗</a></div></div>
+        <form class="contact-form" id="contactForm"><label>Your Name<input name="name" placeholder="Jane Doe" required /></label><label>Your Email<input name="email" type="email" placeholder="jane@example.com" required /></label><label>Message<textarea name="message" rows="4" placeholder="Tell me about your idea..." required></textarea></label><button class="btn primary" type="submit">Send Message <span>↗</span></button><p class="form-note" id="formNote">This form opens your email application to send your message.</p></form>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#home">ME<span>.</span></a><div><strong>Mala Eramma</strong><p>Python Full Stack Developer</p></div><a href="mailto:ramappamala43@gmail.com">ramappamala43@gmail.com</a><small>© 2026 Mala Eramma. Built with care.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
