@@ -1,3 +1,4 @@
+
 // SKILLS DATA
 
 const skillData = {
@@ -37,9 +38,14 @@ const skillData = {
     ]
 };
 
+
+// DISPLAY SKILLS
+
 const list = document.getElementById("skillList");
 
 function showSkills(key) {
+    if (!list || !skillData[key]) return;
+
     list.innerHTML = skillData[key]
         .map(item => `<div class="skill-item">${item}</div>`)
         .join("");
@@ -49,11 +55,13 @@ showSkills("programming");
 
 document.querySelectorAll(".tab").forEach(button => {
     button.addEventListener("click", () => {
+
         document.querySelectorAll(".tab").forEach(tab => {
             tab.classList.remove("active");
         });
 
         button.classList.add("active");
+
         showSkills(button.dataset.tab);
     });
 });
@@ -62,7 +70,9 @@ document.querySelectorAll(".tab").forEach(button => {
 // PROJECT FILTERS
 
 document.querySelectorAll(".filter").forEach(button => {
+
     button.addEventListener("click", () => {
+
         document.querySelectorAll(".filter").forEach(filter => {
             filter.classList.remove("active");
         });
@@ -72,13 +82,17 @@ document.querySelectorAll(".filter").forEach(button => {
         const selectedFilter = button.dataset.filter;
 
         document.querySelectorAll(".project-card").forEach(card => {
+
             card.style.display =
                 selectedFilter === "all" ||
                 card.dataset.category.includes(selectedFilter)
                     ? ""
                     : "none";
+
         });
+
     });
+
 });
 
 
@@ -96,92 +110,154 @@ let roleIndex = 0;
 
 const roleEl = document.getElementById("roleText");
 
-setInterval(() => {
-    roleIndex = (roleIndex + 1) % roles.length;
+if (roleEl) {
 
-    roleEl.style.opacity = 0;
+    setInterval(() => {
 
-    setTimeout(() => {
-        roleEl.textContent = roles[roleIndex];
-        roleEl.style.opacity = 1;
-    }, 220);
+        roleIndex = (roleIndex + 1) % roles.length;
 
-}, 2400);
+        roleEl.style.opacity = 0;
+
+        setTimeout(() => {
+            roleEl.textContent = roles[roleIndex];
+            roleEl.style.opacity = 1;
+        }, 220);
+
+    }, 2400);
+
+}
 
 
 // MOBILE NAVIGATION
 
-document.querySelector(".menu").addEventListener("click", () => {
-    document.getElementById("nav").classList.toggle("open");
-});
+const menuButton = document.querySelector(".menu");
+const navigation = document.getElementById("nav");
 
-document.querySelectorAll("#nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        document.getElementById("nav").classList.remove("open");
+if (menuButton && navigation) {
+
+    menuButton.addEventListener("click", () => {
+        navigation.classList.toggle("open");
     });
-});
+
+    document.querySelectorAll("#nav a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            navigation.classList.remove("open");
+        });
+
+    });
+
+}
 
 
-// LET'S CONNECT CONTACT FORM
+// CONTACT FORM - OPEN GMAIL
 
-document.getElementById("contactForm").addEventListener("submit", event => {
-    event.preventDefault();
+const contactForm = document.getElementById("contactForm");
 
-    const form = event.target;
+if (contactForm) {
 
-    const name = form.elements["name"].value.trim();
-    const email = form.elements["email"].value.trim();
-    const message = form.elements["message"].value.trim();
+    contactForm.addEventListener("submit", event => {
 
-    const formNote = document.getElementById("formNote");
+        event.preventDefault();
 
-    if (!name || !email || !message) {
-        formNote.textContent = "Please fill in all fields.";
-        return;
-    }
+        const form = event.target;
 
-    const subject = encodeURIComponent(
-        "Portfolio enquiry from " + name
-    );
+        const name = form.elements["name"].value.trim();
+        const email = form.elements["email"].value.trim();
+        const message = form.elements["message"].value.trim();
 
-    const body = encodeURIComponent(
-        "Name: " + name +
-        "\nEmail: " + email +
-        "\n\nMessage:\n" + message
-    );
+        const formNote = document.getElementById("formNote");
 
-    formNote.textContent = "Opening your email application...";
+        // VALIDATE FORM
 
-    window.location.href =
-        `mailto:ramappamala43@gmail.com?subject=${subject}&body=${body}`;
-});
+        if (!name || !email || !message) {
+
+            formNote.textContent = "Please fill in all fields.";
+
+            return;
+        }
+
+        // VALIDATE EMAIL FORMAT
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+
+            formNote.textContent = "Please enter a valid email address.";
+
+            return;
+        }
+
+        // CREATE EMAIL CONTENT
+
+        const subject = encodeURIComponent(
+            "Portfolio enquiry from " + name
+        );
+
+        const body = encodeURIComponent(
+            "Name: " + name +
+            "\nEmail: " + email +
+            "\n\nMessage:\n" + message
+        );
+
+        // OPEN GMAIL COMPOSE WINDOW
+
+        const gmailUrl =
+            "https://mail.google.com/mail/?view=cm&fs=1" +
+            "&to=ramappamala43@gmail.com" +
+            "&su=" + subject +
+            "&body=" + body;
+
+        formNote.textContent = "Opening Gmail...";
+
+        window.open(gmailUrl, "_blank");
+
+    });
+
+}
 
 
 // CERTIFICATE ANIMATIONS
 
 const certificateCards = document.querySelectorAll(".cert-card");
 
-const certificateObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            certificateCards.forEach((card, index) => {
-                if (card === entry.target) {
-                    setTimeout(() => {
-                        card.classList.add("show");
-                    }, index * 200);
-                }
-            });
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
-}, {
-    threshold: 0.2
-});
+if ("IntersectionObserver" in window) {
 
-certificateCards.forEach(card => {
-    certificateObserver.observe(card);
-});
+    const certificateObserver = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const index = Array.from(certificateCards).indexOf(entry.target);
+
+                setTimeout(() => {
+                    entry.target.classList.add("show");
+                }, index * 200);
+
+            } else {
+
+                entry.target.classList.remove("show");
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    certificateCards.forEach(card => {
+        certificateObserver.observe(card);
+    });
+
+} else {
+
+    certificateCards.forEach(card => {
+        card.classList.add("show");
+    });
+
+}
 
 
 // PROJECT CARD CURSOR-BASED ZOOM ANIMATION
@@ -191,16 +267,20 @@ const projectCards = document.querySelectorAll(".project-card");
 projectCards.forEach(card => {
 
     card.addEventListener("mousemove", event => {
+
         const rect = card.getBoundingClientRect();
 
         const x = ((event.clientX - rect.left) / rect.width) * 100;
         const y = ((event.clientY - rect.top) / rect.height) * 100;
 
         card.style.transformOrigin = `${x}% ${y}%`;
+
     });
 
     card.addEventListener("mouseleave", () => {
+
         card.style.transformOrigin = "center center";
+
     });
 
 });
@@ -210,21 +290,29 @@ projectCards.forEach(card => {
 
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+if (backToTop) {
 
-    if (window.scrollY > 300) {
-        backToTop.classList.add("show");
-    } else {
-        backToTop.classList.remove("show");
-    }
+    window.addEventListener("scroll", () => {
 
-});
+        if (window.scrollY > 300) {
 
-backToTop.addEventListener("click", () => {
+            backToTop.classList.add("show");
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
     });
 
-});
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
