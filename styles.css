@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
@@ -69,7 +68,7 @@ a {
 }
 
 .topbar nav a {
-    font-size: 12px;
+    font-size: 14px;
     color: #a9b6ce;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -82,7 +81,7 @@ a {
 }
 
 .availability {
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     letter-spacing: .1em;
     color: #b9c7dc;
 }
@@ -138,7 +137,7 @@ a {
 .project-meta,
 .cert-card small,
 .contact-details small {
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     letter-spacing: .17em;
     color: #6dbaff;
 }
@@ -161,9 +160,9 @@ a {
 }
 
 .roles {
-    font: 14px 'DM Mono', monospace;
+    font: 16px 'DM Mono', monospace;
     color: #8fcaff;
-    min-height: 24px;
+    min-height: 27px;
 }
 
 .cursor {
@@ -179,7 +178,7 @@ a {
 }
 
 .hero-sub {
-    font: 11px 'DM Mono', monospace;
+    font: 13px 'DM Mono', monospace;
     color: #8696b3;
     letter-spacing: .05em;
 }
@@ -199,16 +198,18 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 20px;
-    padding: 15px 19px;
+    padding: 17px 22px;
     border-radius: 4px;
-    font: 11px 'DM Mono', monospace;
+    font: 14px 'DM Mono', monospace;
+    font-weight: 600;
     letter-spacing: .04em;
     border: 1px solid #29486e;
     cursor: pointer;
+    transition: .3s ease;
 }
 
 .btn span {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .btn.primary {
@@ -300,7 +301,7 @@ a {
 .art-caption {
     position: absolute;
     bottom: 2%;
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     letter-spacing: .28em;
     color: #80bfff;
 }
@@ -312,13 +313,13 @@ a {
     display: flex;
     gap: 18px;
     align-items: center;
-    font: 9px 'DM Mono', monospace;
+    font: 11px 'DM Mono', monospace;
     letter-spacing: .16em;
     color: #7789a7;
 }
 
 .scroll-cue b {
-    font-size: 17px;
+    font-size: 19px;
     color: #5bb2ff;
 }
 
@@ -380,12 +381,12 @@ a {
     grid-row: 2;
     margin-top: 45px;
     color: #9caec8;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.9;
 }
 
 .location {
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     color: #65b4ff!important;
     letter-spacing: .06em;
 }
@@ -409,12 +410,12 @@ a {
 }
 
 .stats strong {
-    font-size: 27px;
+    font-size: 29px;
     color: #e9f3ff;
 }
 
 .stats span {
-    font: 9px 'DM Mono', monospace;
+    font: 11px 'DM Mono', monospace;
     color: #7186a6;
     margin-top: 5px;
 }
@@ -435,17 +436,18 @@ a {
 }
 
 .focus-grid article>span {
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     color: #4b9de9;
 }
 
 .focus-grid h3 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 22px 0 7px;
 }
 
 .focus-grid p {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.7;
     color: #8192ad;
     margin: 0;
 }
@@ -489,7 +491,7 @@ a {
 
 .orbit-label {
     position: absolute;
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     color: #8dcaff;
     letter-spacing: .1em;
     background: #0b1a32;
@@ -541,8 +543,8 @@ a {
     border: 1px solid transparent;
     background: transparent;
     color: #8294b1;
-    padding: 9px 12px;
-    font: 11px 'DM Mono', monospace;
+    padding: 11px 16px;
+    font: 13px 'DM Mono', monospace;
     cursor: pointer;
 }
 
@@ -561,11 +563,11 @@ a {
 }
 
 .skill-item {
-    padding: 13px 14px;
+    padding: 15px;
     background: #0b172b;
     border: 1px solid #172b48;
     color: #c5d7ef;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .skill-item:before {
@@ -581,7 +583,7 @@ a {
 .section-desc {
     max-width: 490px;
     color: #8b9db8;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.8;
     margin-top: 18px;
 }
@@ -594,7 +596,7 @@ a {
 
 .filter {
     border-color: #1b2e4b;
-    padding: 9px 17px;
+    padding: 11px 17px;
 }
 
 .project-grid {
@@ -602,7 +604,6 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
-
 
 .project-card {
     background: linear-gradient(150deg,#0b1528,#070d1c);
@@ -618,7 +619,6 @@ a {
     border-color: #54aaff;
     box-shadow: 0 15px 35px rgba(45, 145, 255, 0.35);
 }
-
 
 .project-visual {
     height: 190px;
@@ -733,7 +733,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font: 9px 'DM Mono', monospace;
+    font: 11px 'DM Mono', monospace;
 }
 
 .visual-calc {
@@ -754,7 +754,7 @@ a {
     flex-direction: column;
     text-align: right;
     color: #a6a2d8;
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
 }
 
 .calculator strong {
@@ -764,17 +764,17 @@ a {
 
 .project-meta {
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .project-card h3 {
-    font-size: 20px;
+    font-size: 23px;
     letter-spacing: -.04em;
     margin: 10px 0;
 }
 
 .project-card > p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.8;
     color: #93a5c0;
     min-height: 42px;
@@ -786,13 +786,12 @@ a {
     flex-wrap: wrap;
     margin: 17px 0;
     color: #83bfff;
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
 }
 
 .tags span {
     color: #8d9db5;
 }
-
 
 .project-links {
     display: flex;
@@ -807,13 +806,14 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 11px 17px;
+    padding: 13px 20px;
     min-width: 130px;
     border: 1px solid #3999ed;
     border-radius: 6px;
     background: linear-gradient(120deg, #1265b5, #218ee8);
     color: #ffffff;
-    font: 11px 'DM Mono', monospace;
+    font: 14px 'DM Mono', monospace;
+    font-weight: 600;
     letter-spacing: .03em;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(35, 137, 230, .2);
@@ -828,13 +828,11 @@ a {
     box-shadow: 0 8px 22px rgba(45, 145, 255, .4);
 }
 
-
-
 .project-card small {
     display: block;
     margin-top: 17px;
     color: #57718e;
-    font: 9px 'DM Mono', monospace;
+    font: 11px 'DM Mono', monospace;
     letter-spacing: .1em;
 }
 
@@ -842,7 +840,7 @@ a {
     display: inline-block;
     margin-top: 35px;
     color: #8fcaff;
-    font: 11px 'DM Mono', monospace;
+    font: 13px 'DM Mono', monospace;
 }
 
 .journey {
@@ -860,29 +858,29 @@ a {
 }
 
 .timeline-date {
-    font: 11px 'DM Mono', monospace;
+    font: 13px 'DM Mono', monospace;
     color: #61b4ff;
 }
 
 .timeline-content h3 {
-    font-size: 18px;
+    font-size: 21px;
     margin: 0 0 10px;
 }
 
 .timeline-content p {
-    font-size: 15px;
+    font-size: 16px;
     color: #a6b6cc;
     margin: 0 0 6px;
 }
 
 .timeline-content span {
-    font-size: 12px;
+    font-size: 14px;
     color: #7187a5;
 }
 
 .timeline-content b {
     display: block;
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     color: #70bdff;
     margin-top: 13px;
 }
@@ -903,7 +901,6 @@ a {
     background: #0b1528;
     border: 1px solid #1b2e4b;
     min-height: 150px;
-
     opacity: 0;
     transform: translateY(35px);
     animation: certReveal .8s ease forwards;
@@ -961,18 +958,18 @@ a {
 }
 
 .cert-card small {
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: .08em;
 }
 
 .cert-card h3 {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.5;
     margin: 10px 0 6px;
 }
 
 .cert-card p {
-    font-size: 14px;
+    font-size: 16px;
     color: #8da0ba;
     margin: 0;
 }
@@ -990,13 +987,14 @@ a {
 }
 
 .contact-heading > p:not(.eyebrow) {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1.8;
     color: #a9bad2;
     margin-top: 24px;
 }
 
 .relocate {
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     color: #69b9ff;
 }
 
@@ -1020,7 +1018,7 @@ a {
 
 .contact-details p,
 .contact-details a {
-    font-size: 15px;
+    font-size: 16px;
     color: #d3e2f5;
     margin: 0;
 }
@@ -1029,7 +1027,7 @@ a {
     display: flex;
     gap: 25px;
     margin-top: 10px;
-    font: 11px 'DM Mono', monospace;
+    font: 14px 'DM Mono', monospace;
 }
 
 .contact-form {
@@ -1039,7 +1037,7 @@ a {
 }
 
 .contact-form label {
-    font: 10px 'DM Mono', monospace;
+    font: 13px 'DM Mono', monospace;
     color: #8da3c1;
     letter-spacing: .08em;
 }
@@ -1049,12 +1047,12 @@ a {
     display: block;
     width: 100%;
     margin-top: 8px;
-    padding: 14px;
+    padding: 16px;
     background: #09162a;
     border: 1px solid #1d3554;
     border-radius: 3px;
     color: white;
-    font: 14px 'Inter', sans-serif;
+    font: 16px 'Inter', sans-serif;
     outline: none;
     resize: vertical;
 }
@@ -1069,7 +1067,7 @@ a {
 }
 
 .form-note {
-    font-size: 11px;
+    font-size: 13px;
     color: #6f86a5;
     margin: 0;
 }
@@ -1088,22 +1086,56 @@ footer > div {
 }
 
 footer strong {
-    font-size: 12px;
+    font-size: 14px;
     color: #e1edff;
 }
 
 footer p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 4px 0;
 }
 
 footer > a:not(.brand) {
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
 }
 
 footer small {
-    font: 10px 'DM Mono', monospace;
+    font: 12px 'DM Mono', monospace;
     color: #61738e;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 52px;
+    height: 52px;
+    border: 1px solid #54aaff;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#1265b5,#218ee8);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 5px 22px rgba(35,137,230,.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity .3s ease, visibility .3s ease, transform .3s ease, background .3s ease, box-shadow .3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #54aaff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(45,145,255,.55);
 }
 
 /* Animations */
@@ -1260,8 +1292,8 @@ footer small {
     }
 
     .tab {
-        font-size: 9px;
-        padding: 8px;
+        font-size: 12px;
+        padding: 9px 10px;
     }
 
     .skill-list {
@@ -1297,6 +1329,13 @@ footer small {
 
     .section-heading h2 {
         font-size: 42px;
+    }
+
+    .back-to-top {
+        right: 18px;
+        bottom: 18px;
+        width: 46px;
+        height: 46px;
     }
 }
 
